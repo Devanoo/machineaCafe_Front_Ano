@@ -1,0 +1,68 @@
+<ion-content>
+        <div >
+          <div class="container">
+  
+            <br>
+            <br>
+            <div style="margin:50px;">
+              Sélectionner un Badge parmi les derniers badge sauvegardés
+              <br> Numéro de Badge : 
+              <select ng-options="item as item.Id for item in badges track by item.Id" ng-model="choix"></select>
+              <br>
+              <br>
+              <div class="radio" ng-repeat="item in items" value="{{item}}">
+                <label class="radio-inline">
+                       <input type="radio" name ="boisson" ng-model="choix.Name_Boisson" ng-value="item.Name">    
+                        {{item.Name}}
+                    </label>
+              </div>
+              <br> Choisissez la quantité du sucre (ne mettez pas trop pour le bien de votre santé :D)
+              <br>
+              <button ng-click="icrementer()" class="btn btn-danger btn-sm">
+                      + 
+                </button>
+              <button type="button" class="btn btn-primary btn-sm">
+                      {{choix.sucre}}
+                </button>
+              <button ng-click="decrement()" class="btn btn-success btn-sm">
+                      -
+                </button>
+            </div>
+            <form class="form" style="margin:50px;" name="myForm">
+              Voulez vous utiliser votre propre mug ou non ?
+              <br>
+              <label>
+                 <input type="radio" ng-model="choix.Mug" ng-value="true">    
+                 Oui
+                 </label>
+              <label>
+                 <input type="radio" ng-model="choix.Mug" ng-value="false">    
+                 Non
+                 </label>
+              <br>
+              <br> Voulez vous utiliser un badge permettant de mémoriser votre dernière sélection qui vous sera proposée la
+              foix suivante ?
+              <br>
+              <label>
+                 <input type="radio" ng-model="choix.Badge" ng-value="true" ng-model="checked" >    
+                 Oui
+                 </label>
+              <label>
+                 <input type="radio" ng-model="choix.Badge" ng-value="false" ng-model="checked">    
+                 Non
+                 </label>
+              <br>
+              
+              <br><br>
+              <button id="servwithsave" class="btn btn-primary" ng-click="newPost()" ng-disabled="checked">Commander</button>
+  
+              <br>
+              <br>
+              <button id="servwithoutsave" class="btn btn-success" ng-click="info2()">Confirm Dialog</button>
+  
+            </form>
+  
+          </div>
+        </div>
+  
+      </ion-content>
