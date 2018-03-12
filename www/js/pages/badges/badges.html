@@ -7,7 +7,6 @@
             <div style="margin:50px;">
               Sélectionner un Badge parmi les derniers badge sauvegardés
               <br> Numéro de Badge : 
-              {{choix}}
               <select ng-options="item as item.Id for item in badges track by item.Id" ng-model="choix"></select>
               <button ng-click="reset()"class="btn btn-primary btn-md" >reset</button>
               <br>
