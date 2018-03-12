@@ -32,8 +32,10 @@ angular.module('starter')
     }
 
     function postBage(data){
+       // console.log(data);
         var deferred = $q.defer();
-        $http.post(url,data).success(function (response) {
+        $http.post(url,data,{ headers: { 'Content-Type': 'application/x-www-form-urlencoded' }})
+        .success(function (response) {
 
             deferred.resolve(response);
 

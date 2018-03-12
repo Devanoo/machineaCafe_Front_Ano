@@ -7,7 +7,7 @@ angular.module('starter')
         $stateProvider.state('badges', {
             url: "/badges",
             templateUrl: "js/pages/badges/badges.html",
-            controller: 'badgesCotroller'
+            controller: 'badgesController'
         })
 
             // if none of the above states are matched, use this as the fallback

@@ -7,9 +7,12 @@
             <div style="margin:50px;">
               Sélectionner un Badge parmi les derniers badge sauvegardés
               <br> Numéro de Badge : 
+              {{choix}}
               <select ng-options="item as item.Id for item in badges track by item.Id" ng-model="choix"></select>
+              <button ng-click="reset()"class="btn btn-primary btn-md" >reset</button>
               <br>
               <br>
+
               <div class="radio" ng-repeat="item in items" value="{{item}}">
                 <label class="radio-inline">
                        <input type="radio" name ="boisson" ng-model="choix.Name_Boisson" ng-value="item.Name">    
@@ -18,13 +21,13 @@
               </div>
               <br> Choisissez la quantité du sucre (ne mettez pas trop pour le bien de votre santé :D)
               <br>
-              <button ng-click="icrementer()" class="btn btn-danger btn-sm">
+              <button ng-click="icrementer(choix)" class="btn btn-danger btn-sm">
                       + 
                 </button>
               <button type="button" class="btn btn-primary btn-sm">
                       {{choix.sucre}}
                 </button>
-              <button ng-click="decrement()" class="btn btn-success btn-sm">
+              <button ng-click="decrement(choix)" class="btn btn-success btn-sm">
                       -
                 </button>
             </div>
@@ -52,14 +55,11 @@
                  Non
                  </label>
               <br>
-              
-              <br><br>
-              <button id="servwithsave" class="btn btn-primary" ng-click="newPost()" ng-disabled="checked">Commander</button>
-  
               <br>
               <br>
-              <button id="servwithoutsave" class="btn btn-success" ng-click="info2()">Confirm Dialog</button>
-  
+              <button class="btn btn-primary" ng-click="showConfirm()">
+                Confirmer commande
+              </button>
             </form>
   
           </div>
