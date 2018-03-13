@@ -1,6 +1,6 @@
 /*global angular*/  
   
-angular.module('starter').service('myDataService',  
+angular.module('MachineaCafe').service('myDataService',  
 [  
     '$http',  
     '$q',  

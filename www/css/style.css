@@ -12,4 +12,9 @@
     background-color: transparent;
   }
 
+  .popup-pin .popup { 
+  height: 80%;
+  width: 80%; 
+}
+
   /* ///pop up */

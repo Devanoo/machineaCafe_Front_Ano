@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('starter')
+angular.module('MachineaCafe')
 .factory('authService', ['$http', '$q', 'localStorageService','$rootScope', function ($http, $q, localStorageService,$rootScope) {
 
     var authServiceFactory = {};

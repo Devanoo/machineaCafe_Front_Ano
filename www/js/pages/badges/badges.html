@@ -7,8 +7,8 @@
             <div style="margin:50px;">
               Sélectionner un Badge parmi les derniers badge sauvegardés
               <br> Numéro de Badge : 
-              <select ng-options="item as item.Id for item in badges track by item.Id" ng-model="choix"></select>
-              <button ng-click="reset()"class="btn btn-primary btn-md" >reset</button>
+              <select ng-options="item as item.Id for item in badges track by item.Id" ng-model="choix" ></select>
+              <button ng-click="choix.Id = 0;reset(choix) "class="btn btn-primary btn-sm" >reset</button>
               <br>
               <br>
 
@@ -46,17 +46,17 @@
               foix suivante ?
               <br>
               <label>
-                 <input type="radio" ng-model="choix.Badge" ng-value="true" ng-model="checked" >    
+                 <input type="radio" ng-model="choix.Badge" ng-value="true"  >    
                  Oui
                  </label>
               <label>
-                 <input type="radio" ng-model="choix.Badge" ng-value="false" ng-model="checked">    
+                 <input type="radio" ng-model="choix.Badge" ng-value="false" >    
                  Non
                  </label>
               <br>
               <br>
               <br>
-              <button class="btn btn-primary" ng-click="showConfirm()">
+              <button class="btn btn-primary btn-xxl" ng-click= "showConfirm(choix)">
                 Confirmer commande
               </button>
             </form>

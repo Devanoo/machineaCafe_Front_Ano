@@ -27,7 +27,7 @@
 - category: Framework
   description: "Examples that focus on implementing uses of built-in components provided by Bootstrap."
   examples:
-    - name: "Starter template"
+    - name: "MachineaCafe template"
       description: "Nothing but the basics: compiled CSS and JavaScript."
     - name: Grid
       description: "Multiple examples of grid layouts with all four tiers, nesting, and more."

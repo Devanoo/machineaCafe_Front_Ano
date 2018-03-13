@@ -1,4 +1,4 @@
-angular.module('starter')
+angular.module('MachineaCafe')
 .service("badegesService",function($http, $q){
 
     var url = serviceBase +"/badges";
